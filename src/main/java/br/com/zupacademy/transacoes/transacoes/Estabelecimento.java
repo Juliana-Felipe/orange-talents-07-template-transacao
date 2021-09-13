@@ -17,4 +17,13 @@ public class Estabelecimento {
     @Deprecated
     public Estabelecimento() {
     }
+
+    @Override
+    public String toString() {
+        return "Estabelecimento{" +
+                "nome='" + nome + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", endereco='" + endereco + '\'' +
+                '}';
+    }
 }

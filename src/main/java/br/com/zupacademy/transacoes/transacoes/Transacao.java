@@ -1,5 +1,7 @@
 package br.com.zupacademy.transacoes.transacoes;
 
+import br.com.zupacademy.transacoes.compras.TransacaoRespose;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -28,5 +30,9 @@ public class Transacao {
 
     @Deprecated
     public Transacao() {
+    }
+
+    public TransacaoRespose converteResposta(){
+        return new TransacaoRespose(id, idExterno,valor.toString(), estabelecimento.toString(), cartao.toString(), efetivadaEm.toString());
     }
 }

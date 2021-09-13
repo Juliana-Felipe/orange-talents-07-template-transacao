@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 public class Cartao {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,5 +23,17 @@ public class Cartao {
 
     @Deprecated
     public Cartao() {
+    }
+
+    public String getIdExterno() {
+        return idExterno;
+    }
+
+    @Override
+    public String toString() {
+        return "Cartao{" +
+                ", idExterno='" + idExterno + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
