@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/{id}/compras")
+@RequestMapping("/detalhamento/{id}/compras")
 public class ControllerCompras {
 
     TransacaoRepository transacaoRepository;

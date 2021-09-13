@@ -75,6 +75,7 @@ services:
       POSTGRES_PORT_5432_TCP_ADDR: 127.0.0.1
     restart: on-failure
 
+
   analise:
     image: 'zupacademy/analise-financeira'
     ports:
@@ -138,15 +139,6 @@ services:
       - "3000:3000"
     depends_on:
       - prometheus
-
-  kafdrop:
-    image: obsidiandynamics/kafdrop:latest
-    depends_on:
-      - kafka
-    ports:
-      - 19000:9000
-    environment:
-      KAFKA_BROKERCONNECT: kafka:9092
 
   vault:
     image: vault:1.5.3
